@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+
+h1, #instructions {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#interval-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*along h-cross-axis*/
+}
+
+input[type="number"] {
+  border: none;
+  background-color: #F4F4F4;
+  border-bottom: 1px solid black;
+}
+
+.item {
+  background-color: #F4F4F4;
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.blue-bg {
+  background-color: #8DB1AB;
+}
+
+.green-bg {
+  background-color: #CEE397;
+}

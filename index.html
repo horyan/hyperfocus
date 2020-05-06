@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Hyperfocus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body id="background">
+    <header>
+      <h1>Hyperfocus</h1>
+    </header>
+    <main>
+      <section id="instructions">
+        <p>A distraction blocker to help manage attention. Set time intervals to limit breaks and concentrate on tasks.</p>
+      </section>
+      <form id="interval-form">
+        <label class="item">
+          Enter <span class="bold">minute(s)</span> of focus:
+          <input id="focus-input" type="number" value="0" required>
+        </label>
+        <label class="item">
+          Enter <span class="bold">minute(s)</span> of break:
+          <input id="break-input" type="number" value="0" required>
+        </label>
+        <button id="action-btn" class="item" type="submit">Start</button>
+      </form>
+    </main>
+  </body>
+  <footer>
+    <script src="js/main.js"></script>
+  </footer>
+</html>
