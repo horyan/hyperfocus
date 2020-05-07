@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
 }
 
-h1, #instructions {
+h1, h6, #instructions {
   text-align: center;
 }
 
