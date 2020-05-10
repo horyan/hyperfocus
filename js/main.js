@@ -10,6 +10,8 @@ function revertDefault(e){
   // paste reusable 'revert default' chunk here
   // e.target.textContent = 'Start';
   // e.target.setAttribute('type', 'submit');
+  // OR just have stop button enabled, hit to refresh page
+    // easier than accounting for different stop behaviors per phase
 }
 
 function startFocus(bgClasses, focusTimer, breakTimer) {
@@ -28,7 +30,7 @@ function configureTimers(bgClasses, focusTimer, breakTimer) {
   // TODO: add functionality
   actionBtn.setAttribute('disabled', ''); // temporary
   //actionBtn.setAttribute('type', 'reset');
-  //actionBtn.addEventListener('reset', revertDefault);*/
+  //actionBtn.addEventListener('click', revertDefault);
   
   setTimeout(() => {
     focusMinutes === 60000 ? console.log(('1 minute of focus has passed')) : console.log((`${focusMinutes/60000} minutes of focus have passed`));
@@ -41,13 +43,15 @@ function configureTimers(bgClasses, focusTimer, breakTimer) {
     setTimeout(() => {
       breakMinutes === 60000 ? console.log(('1 minute of break has passed')) : console.log((`${breakMinutes/60000} minutes of break have passed`));
       // reusable revert default chunk
-      const actionBtn = document.getElementById('action-btn').textContent = 'Start';
+      const actionBtn = document.getElementById('action-btn');
+      actionBtn.textContent = 'Start';
       // TODO: revert start functionality after implementing stop
       document.getElementById('status').textContent = 'Waiting for input...';
       bgClasses.toggle('green-bg');
       document.title = 'Hyperfocus';
       focusTimer.removeAttribute('disabled');
       breakTimer.removeAttribute('disabled');
+      actionBtn.removeAttribute('disabled'); // temporary
     }, breakMinutes);
   }, focusMinutes);
 }
